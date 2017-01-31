@@ -9,7 +9,7 @@ RSpec.feature "Creating Articles"  do
 		fill_in "Title", with: "Creating a Blog"
 		fill_in "Body", with: "Lorem Ipsum"
 
-		Click_button "Create Article"
+		click_button "Create Article"
 
 		expect(page).to have_content("Article has been created")
 		expect(page.current_path).to eq(articles_path)

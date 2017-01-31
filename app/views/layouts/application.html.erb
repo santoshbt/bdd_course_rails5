@@ -9,6 +9,11 @@
   </head>
 
   <body>
+	<%flash.each do |k,m| %>
+		<div class="text-center alert alert- <%= k == 'notice'? 'success' : 'danger' %>">
+			<%=m%>
+		</div>
+	<% end %>
     <%= yield %>
   </body>
 </html>
